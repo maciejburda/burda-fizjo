@@ -84,13 +84,6 @@ p:last-child { margin-bottom: 0; }
 
 }
 
-.skip-link {
-  position: absolute; left: 1rem; top: -4rem; z-index: 100;
-  background: var(--teal-700); color: #fff;
-  padding: .7rem 1.1rem; border-radius: 0 0 var(--radius) var(--radius);
-  text-decoration: none; transition: top .15s ease;
-}
-.skip-link:focus { top: 0; color: #fff; }
 
 :where(a, button, summary, input):focus-visible {
   outline: 3px solid var(--sand);
