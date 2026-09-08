@@ -4,7 +4,7 @@ Statyczna wizytówka fizjoterapeuty Wojciecha Burdy, hostowana na GitHub Pages.
 
 **Adres strony:** https://burdafizjo.pl/
 
-Fizjoterapia z dojazdem do pacjenta, Chojnice 89-600 i okolice.
+Fizjoterapia z dojazdem do pacjenta, Chojnice i okolice.
 Tel. 698 656 720, e-mail wobel23@o2.pl.
 
 ## Co jest w repozytorium
