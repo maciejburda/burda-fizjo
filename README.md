@@ -28,25 +28,18 @@ blok o wizytach domowych) i **Kontakt**.
 Świadomie nie ma cennika, FAQ, opisu przebiegu wizyty ani listy kursów. Wycena jest
 indywidualna i ustalana po wywiadzie oraz badaniu wstępnym, nie przez telefon.
 
-## ⚠️ Zdjęcie do wgrania
+## Zdjęcie w sekcji powitalnej
 
-W sekcji powitalnej jest przygotowane miejsce na zdjęcie, widoczne jako przerywana ramka
-z nazwą pliku. Wgraj plik do katalogu `assets/`, a w `index.html` zamień cały blok
-`<div class="photo-slot">...</div>` na jeden znacznik:
+Plik `assets/wojciech-burda.jpg` (1196x896, ok. 96 kB). Wyświetla się z kadrowaniem
+`object-fit: cover`: na szerokich ekranach w proporcji 4:5, na telefonach 4:3, czyli
+w pełnym kadrze, bo taką proporcję ma oryginał.
 
-```html
-<img src="assets/wojciech-burda.jpg" alt="Wojciech Burda podczas terapii">
-```
-
-Najlepiej sprawdzi się zdjęcie pionowe, w proporcjach zbliżonych do 4:5, zapisane w rozsądnej
-wadze, do mniej więcej 300 kB, żeby strona otwierała się szybko na telefonie.
-
-Atrybut `alt` to krótki opis tego, co widać na zdjęciu. Czytają go wyszukiwarki i czytniki
-ekranu dla osób niewidomych, więc warto go wypełnić sensownie.
+Podmiana zdjęcia to nadpisanie tego pliku. Jeśli nowe będzie miało inne proporcje, warto
+sprawdzić kadr na obu szerokościach i w razie potrzeby dodać `object-position` w regule
+`.hero-media img` w `styles.css`, żeby przesunąć kadr na twarz.
 
 ## Zostało do zrobienia
 
-- [ ] **Zdjęcie do sekcji powitalnej** — opisane wyżej.
 - [ ] **Polityka prywatności i cookies** — strona jej obecnie nie ma. Wersja robocza została
       usunięta, bo ma ją zastąpić dokument przygotowany profesjonalnie. Do czasu jej dodania
       strona nie spełnia obowiązku informacyjnego RODO wobec pacjentów.
