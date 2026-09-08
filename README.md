@@ -2,7 +2,7 @@
 
 Statyczna wizytówka fizjoterapeuty Wojciecha Burdy, hostowana na GitHub Pages.
 
-**Adres strony:** https://maciejburda.github.io/burda-fizjo/
+**Adres strony:** https://burdafizjo.pl/
 
 Fizjoterapia z dojazdem do pacjenta, Chojnice 89-600 i okolice.
 Tel. 698 656 720, e-mail wobel23@o2.pl.
@@ -43,8 +43,6 @@ sprawdzić kadr na obu szerokościach i w razie potrzeby dodać `object-position
 - [ ] **Polityka prywatności i cookies** — strona jej obecnie nie ma. Wersja robocza została
       usunięta, bo ma ją zastąpić dokument przygotowany profesjonalnie. Do czasu jej dodania
       strona nie spełnia obowiązku informacyjnego RODO wobec pacjentów.
-- [ ] **Domena `burdafizjo.pl`** — widnieje na materiałach reklamowych, ale na dzień
-      2026-09-08 nie ma ustawionych rekordów DNS i nie prowadzi na tę stronę. Instrukcja niżej.
 
 ## Jak edytować
 
@@ -84,16 +82,18 @@ Ten ostatni zasila wizytówkę w wynikach Google, więc przy zmianie danych trze
 GitHub Pages publikuje zawartość gałęzi `main` z katalogu głównego. Każdy push do `main`
 aktualizuje stronę.
 
-### Podpięcie domeny burdafizjo.pl
+### Domena
 
-1. U rejestratora domeny ustaw rekordy `A` dla `burdafizjo.pl` na adresy GitHub Pages:
-   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`,
-   oraz rekord `CNAME` dla `www` na `maciejburda.github.io`.
-2. W repozytorium: *Settings* → *Pages* → *Custom domain* wpisz `burdafizjo.pl` i zapisz.
-   GitHub sam doda do repozytorium plik `CNAME`.
-3. Po weryfikacji domeny zaznacz *Enforce HTTPS*.
-4. Podmień adresy `https://maciejburda.github.io/burda-fizjo/` na nową domenę w plikach
-   `index.html`, `robots.txt` i `sitemap.xml`.
+Strona działa pod `https://burdafizjo.pl`. Konfiguracja jest gotowa i nie wymaga już zmian:
+
+- W strefie DNS w home.pl: cztery rekordy `A` i cztery `AAAA` dla domeny głównej, wskazujące
+  na serwery GitHub Pages, oraz `CNAME` dla `www` na `maciejburda.github.io.`
+- W repozytorium plik `CNAME` z treścią `burdafizjo.pl`. Utworzył go GitHub przy ustawianiu
+  domeny i nie należy go usuwać, bo bez niego strona przestanie odpowiadać pod tym adresem.
+- Wymuszanie HTTPS jest włączone, certyfikat wystawia GitHub automatycznie.
+
+`www.burdafizjo.pl` oraz stary adres `maciejburda.github.io/burda-fizjo/` przekierowują
+na wersję bez `www`.
 
 ## Formularz kontaktowy
 

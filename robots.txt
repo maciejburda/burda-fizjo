@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maciejburda.github.io/burda-fizjo/sitemap.xml
+Sitemap: https://burdafizjo.pl/sitemap.xml
