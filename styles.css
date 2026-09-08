@@ -347,6 +347,8 @@ section[id] { scroll-margin-top: 88px; }
 .cta-band .btn-primary:hover { background: var(--sand-soft); color: var(--teal-900); }
 
 .cta-band-home { margin-top: 3rem; gap: 1.5rem 2rem; }
+/* Pasek z samym przyciskiem: bez akapitu space-between nie ma czego rozsuwać. */
+.cta-band-solo { justify-content: center; }
 .cta-band-copy { flex: 1 1 auto; min-width: min(22rem, 100%); max-width: 40rem; }
 .cta-band-copy .btn { margin-top: 1.4rem; }
 .cta-band .cta-kicker {
@@ -428,6 +430,7 @@ section[id] { scroll-margin-top: 88px; }
     padding: .9rem 1.5rem;
   }
   .cta-band { flex-direction: column; align-items: flex-start; }
+  .cta-band-solo { align-items: center; }
 }
 
 @media print {
