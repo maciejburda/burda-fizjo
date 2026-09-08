@@ -12,7 +12,6 @@ Tel. 698 656 720, e-mail wobel23@o2.pl.
 | Plik | Do czego służy |
 | --- | --- |
 | `index.html` | Cała treść strony głównej |
-| `polityka-prywatnosci.html` | Polityka prywatności i plików cookies |
 | `styles.css` | Wygląd (kolory i czcionki zebrane na górze pliku w sekcji `:root`) |
 | `script.js` | Menu mobilne, cień nagłówka, animacja pojawiania się sekcji |
 | `404.html` | Strona błędu dla nieistniejących adresów |
@@ -24,8 +23,7 @@ Tel. 698 656 720, e-mail wobel23@o2.pl.
 ## Struktura strony
 
 Jedna strona przewijana od góry: nagłówek z telefonem, **O mnie**, **Oferta** (6 kart plus
-blok o wizytach domowych) i **Kontakt**. Polityka prywatności jest osobną podstroną,
-podlinkowaną w stopce.
+blok o wizytach domowych) i **Kontakt**.
 
 Świadomie nie ma cennika, FAQ, opisu przebiegu wizyty ani listy kursów. Wycena jest
 indywidualna i ustalana po wywiadzie oraz badaniu wstępnym, nie przez telefon.
@@ -49,11 +47,9 @@ ekranu dla osób niewidomych, więc warto go wypełnić sensownie.
 ## Zostało do zrobienia
 
 - [ ] **Zdjęcie do sekcji powitalnej** — opisane wyżej.
-- [ ] **Polityka prywatności do sprawdzenia** — treść jest napisana pod tę konkretną stronę
-      (brak cookies, brak analityki, hosting GitHub Pages, czcionki Google Fonts), ale nie jest
-      poradą prawną. Przed publikacją na własnej domenie warto dać ją do przejrzenia komuś,
-      kto zna RODO. W punkcie 1 brakuje pełnej nazwy działalności, adresu do korespondencji
-      i NIP-u; miejsce jest oznaczone komentarzem `<!-- TODO -->`.
+- [ ] **Polityka prywatności i cookies** — strona jej obecnie nie ma. Wersja robocza została
+      usunięta, bo ma ją zastąpić dokument przygotowany profesjonalnie. Do czasu jej dodania
+      strona nie spełnia obowiązku informacyjnego RODO wobec pacjentów.
 - [ ] **Domena `burdafizjo.pl`** — widnieje na materiałach reklamowych, ale na dzień
       2026-09-08 nie ma ustawionych rekordów DNS i nie prowadzi na tę stronę. Instrukcja niżej.
 
@@ -86,8 +82,8 @@ git add -A && git commit -m "Aktualizacja treści" && git push
 
 ### Uwaga na dane kontaktowe
 
-Numer telefonu i adres e-mail występują w kilku miejscach: w nagłówku, w treści, w stopce,
-na stronie polityki prywatności oraz w bloku `application/ld+json` na dole `index.html`.
+Numer telefonu i adres e-mail występują w kilku miejscach: w nagłówku, w treści, w stopce
+oraz w bloku `application/ld+json` na dole `index.html`.
 Ten ostatni zasila wizytówkę w wynikach Google, więc przy zmianie danych trzeba poprawić także jego.
 
 ## Hosting
@@ -104,11 +100,10 @@ aktualizuje stronę.
    GitHub sam doda do repozytorium plik `CNAME`.
 3. Po weryfikacji domeny zaznacz *Enforce HTTPS*.
 4. Podmień adresy `https://maciejburda.github.io/burda-fizjo/` na nową domenę w plikach
-   `index.html`, `polityka-prywatnosci.html`, `robots.txt` i `sitemap.xml`.
+   `index.html`, `robots.txt` i `sitemap.xml`.
 
 ## Formularz kontaktowy
 
 Strona celowo nie ma formularza. GitHub Pages serwuje wyłącznie pliki statyczne i nie potrafi
 wysłać e-maila, więc kontakt odbywa się przez klikalny telefon i adres e-mail. Gdyby formularz
 był potrzebny, można podpiąć zewnętrzną usługę (np. Formspree) bez zmiany hostingu.
-Wymagałoby to też uzupełnienia polityki prywatności o dane przekazywane w formularzu.
