@@ -78,7 +78,8 @@ git add -A && git commit -m "Aktualizacja treści" && git push
 
 ### Zasady, których trzyma się treść
 
-- Wszystko napisane w trzeciej osobie, nie w pierwszej.
+- Sekcja „O mnie” napisana w pierwszej osobie, jako wypowiedź fizjoterapeuty.
+  Pozostałe teksty na stronie w trzeciej osobie.
 - Bez myślników w tekstach widocznych dla pacjenta, łącznie z tytułem strony.
 - Dojazd do pacjenta przedstawiony jako zaleta, bez pisania o braku gabinetu.
 - Ceny nie są podawane z góry ani przez telefon.
