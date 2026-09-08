@@ -191,10 +191,6 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 6px 16px rgba(15, 76, 74, .22);
 }
 .btn-primary:hover { background: var(--teal-500); color: #fff; transform: translateY(-1px); }
-.btn-ghost {
-  background: transparent; color: var(--teal-700); border-color: var(--teal-100);
-}
-.btn-ghost:hover { background: var(--teal-50); border-color: var(--teal-500); }
 
 /* ------------------------------------------------------------------ Hero */
 
