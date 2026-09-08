@@ -120,7 +120,7 @@ p:last-child { margin-bottom: 0; }
   display: inline-flex; align-items: center; gap: .65rem;
   text-decoration: none; color: var(--teal-700);
 }
-.brand-mark { display: grid; place-items: center; color: var(--teal-500); }
+.brand-mark { display: grid; place-items: center; color: var(--teal-700); }
 .brand-text { display: grid; line-height: 1.15; }
 .brand-text strong {
   font-family: var(--font-serif); font-weight: 600;
