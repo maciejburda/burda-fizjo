@@ -211,10 +211,14 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
 }
 .eyebrow {
+  font-family: var(--font-sans);
   font-size: .8125rem; font-weight: 600; letter-spacing: .14em;
   text-transform: uppercase; color: var(--teal-500);
   margin: 0 0 .9rem;
 }
+/* W sekcji kontaktowej etykieta jest jedynym nagłówkiem, więc potrzebuje
+   odstępu, który normalnie dawał tytuł sekcji. */
+.section-contact h2.eyebrow { margin-bottom: 1.9rem; }
 .lead {
   font-size: clamp(1.0625rem, 1.6vw, 1.1875rem);
   color: var(--ink-soft); max-width: 34em;
