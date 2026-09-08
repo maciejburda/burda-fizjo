@@ -237,25 +237,30 @@ p:last-child { margin-bottom: 0; }
 }
 
 .hero-media img,
-.illu-frame {
+.hero-media .photo-slot {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4 / 5;
   width: 100%;
   object-fit: cover;
 }
-/* Ramka na ilustrację. Gradient jest na kontenerze, a SVG ma przezroczyste tło,
-   dzięki czemu rysunek nigdy nie zostaje przycięty przy zmianie proporcji. */
-.illu-frame {
-  display: grid; place-items: center;
+
+/* Miejsce na zdjęcie, które klient wgra później. Po podmianie na <img>
+   ta klasa znika ze strony razem z ramką. */
+.photo-slot {
+  display: grid; place-content: center; justify-items: center; gap: .55rem;
   background: linear-gradient(160deg, var(--teal-100), var(--sand-soft));
-  padding: clamp(1rem, 3vw, 2.25rem);
-  overflow: hidden;
+  border: 2px dashed rgba(15, 76, 74, .3);
+  border-radius: var(--radius-lg);
+  color: var(--teal-700); text-align: center;
+  padding: 1.5rem; font-size: .875rem; font-weight: 500;
 }
-.illu-frame img {
-  width: 100%; height: 100%;
-  object-fit: contain;
-  box-shadow: none; border-radius: 0; aspect-ratio: auto;
+.photo-slot code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .75rem; font-weight: 400;
+  background: rgba(255, 255, 255, .65);
+  padding: .2rem .5rem; border-radius: 6px;
+  color: var(--ink-soft);
 }
 
 /* -------------------------------------------------------------- Sections */
@@ -344,13 +349,25 @@ section[id] { scroll-margin-top: 88px; }
 .cta-band-home { margin-top: 3rem; gap: 1.5rem 2rem; }
 .cta-band-copy { flex: 1 1 auto; min-width: min(22rem, 100%); max-width: 40rem; }
 .cta-band-copy .btn { margin-top: 1.4rem; }
-.cta-illu { flex: 0 0 auto; width: 200px; height: auto; opacity: .9; }
 .cta-band .cta-kicker {
   font-family: var(--font-sans);
   font-size: .8125rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--teal-100); margin-bottom: .45rem;
 }
+
+/* --------------------------------------------------------- Strona prawna */
+
+.legal .wrap { max-width: 46rem; }
+.legal h1 { margin-bottom: .35rem; }
+.legal h2 {
+  font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: .6rem;
+}
+.legal p, .legal li { color: var(--ink-soft); }
+.legal ul { padding-left: 1.15rem; display: grid; gap: .5rem; margin: 0 0 1rem; }
+.legal li::marker { color: var(--teal-500); }
+.legal-date { font-size: .875rem; color: var(--ink-muted); margin-bottom: 2rem; }
+.legal-back { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 
 /* ---------------------------------------------------------------- Footer */
 
@@ -387,7 +404,7 @@ section[id] { scroll-margin-top: 88px; }
   .two-col { grid-template-columns: 1fr; }
   .col-narrow { position: static; }
   .hero-media { order: -1; max-width: 420px; }
-  .hero-media img, .illu-frame { aspect-ratio: 4 / 3; }
+  .hero-media img, .hero-media .photo-slot { aspect-ratio: 4 / 3; }
 }
 
 @media (max-width: 980px) {
@@ -411,7 +428,6 @@ section[id] { scroll-margin-top: 88px; }
     padding: .9rem 1.5rem;
   }
   .cta-band { flex-direction: column; align-items: flex-start; }
-  .cta-illu { display: none; }
 }
 
 @media print {
