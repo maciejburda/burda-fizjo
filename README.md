@@ -4,43 +4,45 @@ Statyczna wizytówka fizjoterapeuty Wojciecha Burdy, hostowana na GitHub Pages.
 
 **Adres strony:** https://maciejburda.github.io/burda-fizjo/
 
+Fizjoterapia z dojazdem do pacjenta, Chojnice 89-600 i okolice.
+Tel. 698 656 720, e-mail wobel23@o2.pl. Bez gabinetu stacjonarnego, 100% wizyt domowych.
+
 ## Co jest w repozytorium
 
 | Plik | Do czego służy |
 | --- | --- |
-| `index.html` | Cała treść strony — tu edytujesz teksty, ceny, kontakt |
+| `index.html` | Cała treść strony |
 | `styles.css` | Wygląd (kolory i czcionki zebrane na górze pliku w sekcji `:root`) |
 | `script.js` | Menu mobilne, cień nagłówka, animacja pojawiania się sekcji |
 | `404.html` | Strona błędu dla nieistniejących adresów |
 | `assets/favicon.svg` | Ikona strony w karcie przeglądarki |
+| `assets/sprzet.svg` | Ilustracja sprzętu w sekcji powitalnej (stół, wałek, piłka, taśmy) |
+| `assets/sprzet-mobilny.svg` | Ilustracja w pasku „Wizyty domowe” (złożony stół, torba, wałek) |
 | `assets/og-image.jpg` | Miniatura przy udostępnianiu linku (Facebook, WhatsApp, Messenger) |
-| `assets/og-image.svg` | Źródło miniatury — po edycji wyeksportuj ponownie do `.jpg` (1200×630) |
+| `assets/og-image.svg` | Źródło miniatury; po edycji wyeksportuj ponownie do `.jpg` w rozmiarze 1200x630 |
 | `robots.txt`, `sitemap.xml` | Podstawowe SEO dla wyszukiwarek |
 
-## ⚠️ Do uzupełnienia przed publikacją
+## Struktura strony
 
-Treść jest **szkicem** — wszystkie dane w nawiasach kwadratowych `[...]` są zmyślonymi
-wypełniaczami i trzeba je podmienić na prawdziwe:
+Jedna strona, cztery ekrany: nagłówek z telefonem, **O mnie**, **Oferta** (6 kart plus blok
+o wizytach domowych) i **Kontakt**. Grafiki sprzętu to rysunki wektorowe, nie zdjęcia. Świadomie nie ma cennika, FAQ, opisu przebiegu wizyty
+ani listy kursów. Ceny ustalane są indywidualnie, przez telefon.
 
-- [x] ~~**Telefon**~~ — uzupełnione: `+48 698 656 720`.
-- [ ] **E-mail** — `kontakt@example.com` (tekst + `href="mailto:"`).
-- [ ] **Adres gabinetu i miasto** — `[ul. Przykładowa 1]`, `[00-000 Miasto]`, `[MIASTO]` w sekcji hero.
-- [ ] **Link do Map Google** — obecnie prowadzi do `https://www.google.com/maps`.
-- [ ] **Godziny przyjęć** — sekcja „Godziny przyjęć”.
-- [ ] **Cennik** — wszystkie `[000] zł` oraz czasy trwania wizyt.
-- [ ] **Opis „O mnie”** — akapity oraz lista „Wykształcenie i kursy”.
-- [ ] **FAQ** — odpowiedź o NFZ i okno na odwołanie wizyty (`[24]` h).
-- [ ] **Zdjęcie** — wgraj `assets/wojciech-burda.jpg` i podmień blok `.photo-placeholder`
-      w sekcji hero na `<img src="assets/wojciech-burda.jpg" alt="Wojciech Burda, fizjoterapeuta">`.
-- [ ] **Dane strukturalne** — blok `application/ld+json` na dole `index.html` (telefon, adres,
-      godziny) — to on zasila wizytówkę w wynikach Google.
+## Zostało do uzupełnienia
 
-Miejsca do zmiany są w kodzie oznaczone komentarzem `<!-- TODO: ... -->`.
+- [ ] **Prawdziwe zdjęcia** — obecnie stronę ilustrują rysunki wektorowe sprzętu. To rozwiązanie
+      tymczasowe. Zdjęcie Wojciecha przy pracy zbuduje zaufanie znacznie mocniej niż rysunek,
+      więc warto je podmienić. Wgraj `assets/wojciech-burda.jpg`, a w `index.html` zamień
+      zawartość `.illu-frame` na `<img src="assets/wojciech-burda.jpg" alt="Wojciech Burda, fizjoterapeuta">`
+      i zdejmij w `styles.css` `padding` oraz `object-fit: contain` z `.illu-frame`.
+      Miejsce jest opisane komentarzem w `index.html`.
+- [ ] **Domena `burdafizjo.pl`** — widnieje na materiałach reklamowych, ale na dzień
+      2026-09-08 nie ma ustawionych rekordów DNS i nie prowadzi na tę stronę. Instrukcja niżej.
 
 ## Jak edytować
 
-**Przez przeglądarkę (najprościej):** wejdź na plik w GitHubie → ikona ołówka → zmień tekst →
-*Commit changes*. Strona przebuduje się sama w ciągu ~1 minuty.
+**Przez przeglądarkę (najprościej):** wejdź na plik w GitHubie, kliknij ikonę ołówka,
+zmień tekst i zapisz przez *Commit changes*. Strona przebuduje się sama w ciągu minuty.
 
 **Lokalnie:**
 
@@ -56,22 +58,30 @@ Po zmianach:
 git add -A && git commit -m "Aktualizacja treści" && git push
 ```
 
+### Uwaga na dane kontaktowe
+
+Numer telefonu i adres e-mail występują w kilku miejscach `index.html`: w nagłówku, w treści,
+w stopce oraz w bloku `application/ld+json` na samym dole pliku. Ten ostatni zasila wizytówkę
+w wynikach Google, więc przy zmianie danych trzeba poprawić także jego.
+
 ## Hosting
 
 GitHub Pages publikuje zawartość gałęzi `main` z katalogu głównego. Każdy push do `main`
 aktualizuje stronę.
 
-### Własna domena (opcjonalnie)
+### Podpięcie domeny burdafizjo.pl
 
-1. W ustawieniach repozytorium → *Pages* → *Custom domain* wpisz np. `burdafizjo.pl`.
-2. U rejestratora domeny dodaj rekordy `A` na `185.199.108.153`, `185.199.109.153`,
-   `185.199.110.153`, `185.199.111.153` (oraz `CNAME` `www` → `maciejburda.github.io`).
-3. Zaznacz *Enforce HTTPS*.
-4. Podmień adresy `https://maciejburda.github.io/burda-fizjo/` w `index.html` (canonical, Open Graph,
-   JSON-LD), `robots.txt` i `sitemap.xml` na nową domenę.
+1. U rejestratora domeny ustaw rekordy `A` dla `burdafizjo.pl` na adresy GitHub Pages:
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`,
+   oraz rekord `CNAME` dla `www` na `maciejburda.github.io`.
+2. W repozytorium: *Settings* → *Pages* → *Custom domain* wpisz `burdafizjo.pl` i zapisz.
+   GitHub sam doda do repozytorium plik `CNAME`.
+3. Po weryfikacji domeny zaznacz *Enforce HTTPS*.
+4. Podmień adresy `https://maciejburda.github.io/burda-fizjo/` na nową domenę w plikach
+   `index.html` (canonical, Open Graph, JSON-LD), `robots.txt` i `sitemap.xml`.
 
 ## Formularz kontaktowy
 
-Strona celowo nie ma formularza — GitHub Pages serwuje wyłącznie pliki statyczne i nie potrafi
-wysłać e-maila. Kontakt odbywa się przez klikalny telefon i e-mail. Jeśli formularz będzie
-potrzebny, można podpiąć zewnętrzną usługę (np. Formspree, Basin) bez zmiany hostingu.
+Strona celowo nie ma formularza. GitHub Pages serwuje wyłącznie pliki statyczne i nie potrafi
+wysłać e-maila, więc kontakt odbywa się przez klikalny telefon i adres e-mail. Gdyby formularz
+był potrzebny, można podpiąć zewnętrzną usługę (np. Formspree) bez zmiany hostingu.

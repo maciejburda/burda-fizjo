@@ -1,16 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f4c4a"/>
-      <stop offset="1" stop-color="#0b3a38"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#g)"/>
-  <circle cx="1010" cy="120" r="260" fill="#1d7a74" opacity=".28"/>
-  <circle cx="140" cy="580" r="200" fill="#c98b5e" opacity=".18"/>
-  <text x="90" y="270" fill="#8fc7c1" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6">FIZJOTERAPIA · TERAPIA MANUALNA</text>
-  <text x="90" y="370" fill="#ffffff" font-family="Georgia, serif" font-size="86" font-weight="600">Wojciech Burda</text>
-  <text x="90" y="440" fill="#cfe0dd" font-family="Helvetica, Arial, sans-serif" font-size="32">Rehabilitacja pourazowa i pooperacyjna · ból kręgosłupa</text>
-  <rect x="90" y="500" width="230" height="62" rx="31" fill="#ffffff"/>
-  <text x="205" y="540" fill="#0b3a38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Umów wizytę</text>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f4c4a"/><stop offset="1" stop-color="#0b3a38"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+    <circle cx="1010" cy="120" r="260" fill="#1d7a74" opacity=".28"/>
+    <circle cx="140" cy="580" r="200" fill="#c98b5e" opacity=".18"/>
+    <text x="90" y="250" fill="#8fc7c1" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6">FIZJOTERAPIA Z DOJAZDEM</text>
+    <text x="90" y="350" fill="#ffffff" font-family="Georgia, serif" font-size="86" font-weight="600">Wojciech Burda</text>
+    <text x="90" y="420" fill="#cfe0dd" font-family="Helvetica, Arial, sans-serif" font-size="32">Wizyty domowe · Chojnice i okolice</text>
+    <rect x="90" y="480" width="300" height="66" rx="33" fill="#ffffff"/>
+    <text x="240" y="523" fill="#0b3a38" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle">tel. 698 656 720</text>
 </svg>
