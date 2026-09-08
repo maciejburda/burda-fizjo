@@ -22,8 +22,7 @@ Statyczna wizytówka fizjoterapeuty Wojciecha Burdy, hostowana na GitHub Pages.
 Treść jest **szkicem** — wszystkie dane w nawiasach kwadratowych `[...]` są zmyślonymi
 wypełniaczami i trzeba je podmienić na prawdziwe:
 
-- [ ] **Telefon** — w `index.html` występuje w 4 miejscach. Podmień zarówno widoczny tekst
-      `[+48 000 000 000]`, jak i `href="tel:+48000000000"` (w `href` bez spacji).
+- [x] ~~**Telefon**~~ — uzupełnione: `+48 698 656 720`.
 - [ ] **E-mail** — `kontakt@example.com` (tekst + `href="mailto:"`).
 - [ ] **Adres gabinetu i miasto** — `[ul. Przykładowa 1]`, `[00-000 Miasto]`, `[MIASTO]` w sekcji hero.
 - [ ] **Link do Map Google** — obecnie prowadzi do `https://www.google.com/maps`.
