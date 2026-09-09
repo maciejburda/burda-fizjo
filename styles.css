@@ -356,6 +356,30 @@ section[id] { scroll-margin-top: 88px; }
   color: var(--teal-100); margin-bottom: .45rem;
 }
 
+/* ------------------------------------------------------- Zgoda na cookies */
+
+.cookie-bar {
+  position: fixed; z-index: 60;
+  left: 1rem; right: 1rem; bottom: 1rem;
+  max-width: 40rem; margin-inline: auto;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: .75rem 1.25rem;
+  background: var(--teal-900); color: #dcebe8;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  font-size: .9375rem;
+}
+.cookie-bar p { margin: 0; flex: 1 1 15rem; }
+.cookie-bar-actions { display: flex; align-items: center; gap: .35rem; }
+.cookie-bar .btn { padding: .6rem 1.25rem; font-size: .9375rem; box-shadow: none; }
+.cookie-bar-decline {
+  background: none; border: 0; cursor: pointer;
+  font: inherit; color: #9ab8b4;
+  padding: .6rem .75rem; border-radius: 999px;
+}
+.cookie-bar-decline:hover { color: #fff; }
+
 /* ---------------------------------------------------------------- Footer */
 
 .site-footer {

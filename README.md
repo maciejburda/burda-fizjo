@@ -20,8 +20,17 @@ Tel. 698 656 720, e-mail wobel23@o2.pl.
 | `assets/og-image.svg` | Źródło miniatury; po edycji wyeksportuj ponownie do `.jpg` w rozmiarze 1200x630 |
 | `robots.txt`, `sitemap.xml` | Podstawowe SEO dla wyszukiwarek |
 
-W nagłówku `index.html` i `404.html` osadzony jest Google Analytics (identyfikator
-pomiaru `G-CJ0MBQ9KHC`). Zbiera dane o ruchu i zapisuje pliki cookies.
+### Analityka i zgoda na cookies
+
+Google Analytics (identyfikator pomiaru `G-CJ0MBQ9KHC`) **nie uruchamia się automatycznie**.
+Skrypt Google jest wczytywany dopiero po kliknięciu „Zgadzam się” w banerze na dole strony,
+więc przed zgodą nic nie jest zapisywane ani wysyłane do Google.
+
+Całość obsługuje druga funkcja w `script.js`. Wybór zapisywany jest w `localStorage` pod
+kluczem `zgoda-analityka` (`tak` albo `nie`) i baner nie pokazuje się ponownie. Żeby przywrócić
+baner na potrzeby testów, wyczyść ten klucz w narzędziach deweloperskich przeglądarki.
+
+Identyfikator pomiaru zmienia się w jednym miejscu: stała `GA_ID` w `script.js`.
 
 W nagłówku `index.html` i `404.html` osadzony jest Google Analytics (identyfikator
 pomiaru `G-CJ0MBQ9KHC`). Zbiera dane o ruchu i zapisuje pliki cookies.

@@ -58,3 +58,58 @@
     });
   }
 })();
+
+/* Zgoda na cookies. Google Analytics startuje dopiero po jej udzieleniu,
+   więc przed kliknięciem nic nie jest zapisywane ani wysyłane do Google. */
+(function () {
+  'use strict';
+
+  var KEY = 'zgoda-analityka';
+  var GA_ID = 'G-CJ0MBQ9KHC';
+
+  function uruchomAnalitykę() {
+    if (window.gtag) { return; }
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  function odczytaj() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function zapisz(wartosc) {
+    try { localStorage.setItem(KEY, wartosc); } catch (e) { /* tryb prywatny */ }
+  }
+
+  var wybor = odczytaj();
+  if (wybor === 'tak') { uruchomAnalitykę(); return; }
+  if (wybor === 'nie') { return; }
+
+  var bar = document.createElement('div');
+  bar.className = 'cookie-bar';
+  bar.setAttribute('role', 'dialog');
+  bar.setAttribute('aria-label', 'Zgoda na pliki cookies');
+  bar.innerHTML =
+    '<p>Ta strona korzysta z plików cookies do analizy ruchu.</p>' +
+    '<div class="cookie-bar-actions">' +
+      '<button type="button" class="btn btn-primary" data-zgoda="tak">Zgadzam się</button>' +
+      '<button type="button" class="cookie-bar-decline" data-zgoda="nie">Nie teraz</button>' +
+    '</div>';
+
+  bar.addEventListener('click', function (event) {
+    var przycisk = event.target.closest('[data-zgoda]');
+    if (!przycisk) { return; }
+    var wartosc = przycisk.getAttribute('data-zgoda');
+    zapisz(wartosc);
+    if (wartosc === 'tak') { uruchomAnalitykę(); }
+    bar.remove();
+  });
+
+  document.body.appendChild(bar);
+})();
