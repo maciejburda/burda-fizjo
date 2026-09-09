@@ -20,6 +20,12 @@ Tel. 698 656 720, e-mail wobel23@o2.pl.
 | `assets/og-image.svg` | Źródło miniatury; po edycji wyeksportuj ponownie do `.jpg` w rozmiarze 1200x630 |
 | `robots.txt`, `sitemap.xml` | Podstawowe SEO dla wyszukiwarek |
 
+W nagłówku `index.html` i `404.html` osadzony jest Google Analytics (identyfikator
+pomiaru `G-CJ0MBQ9KHC`). Zbiera dane o ruchu i zapisuje pliki cookies.
+
+W nagłówku `index.html` i `404.html` osadzony jest Google Analytics (identyfikator
+pomiaru `G-CJ0MBQ9KHC`). Zbiera dane o ruchu i zapisuje pliki cookies.
+
 ## Struktura strony
 
 Jedna strona przewijana od góry: nagłówek z telefonem, **O mnie**, **Oferta** (6 kart plus
@@ -41,8 +47,10 @@ sprawdzić kadr na obu szerokościach i w razie potrzeby dodać `object-position
 ## Zostało do zrobienia
 
 - [ ] **Polityka prywatności i cookies** — strona jej obecnie nie ma. Wersja robocza została
-      usunięta, bo ma ją zastąpić dokument przygotowany profesjonalnie. Do czasu jej dodania
-      strona nie spełnia obowiązku informacyjnego RODO wobec pacjentów.
+      usunięta, bo ma ją zastąpić dokument przygotowany profesjonalnie. Po włączeniu Google
+      Analytics sprawa jest pilniejsza: strona zapisuje teraz cookies i przekazuje dane
+      o ruchu do Google, co wymaga zarówno informacji w polityce prywatności, jak i zgody
+      użytkownika zbieranej przed uruchomieniem analityki.
 
 ## Jak edytować
 
